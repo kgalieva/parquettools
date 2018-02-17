@@ -1,0 +1,17 @@
+{
+   "type" : "record",
+   "name" : "avro_schema",
+   "fields" : [
+      {
+         "name" : "my_list",
+         "type" : [
+            "null",
+            {
+               "type" : "array",
+               "items" : ["int","null"]
+            }
+         ],
+         "default":null
+      }
+   ]
+}

@@ -6,7 +6,7 @@ import org.apache.spark.sql.SparkSession
 * */
 object DDLConverter extends App {
   val spark: SparkSession = SparkSession.builder().appName("DDLConverter").config("spark.master", "local").getOrCreate()
-  println(ddlForParquet("/Users/kate/Downloads/Archive/part-00000.parquet", "test"))
+  println(ddlForParquet("/opt/presto/parquet/uber/test.parquet", "uber"))
 
   def ddlForParquet(path: String, tableName: String): String = {
     val dataFrame = spark.read.parquet(path)

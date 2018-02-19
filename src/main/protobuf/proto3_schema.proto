@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option java_package = "tools.protos";
+
+message Proto3Array {
+  repeated int32 my_list = 1;
+}

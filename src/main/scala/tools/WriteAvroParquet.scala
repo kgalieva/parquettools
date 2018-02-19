@@ -44,9 +44,9 @@ object WriteAvroParquet {
       .build()
 
     var data = List(arr1, arr2, arr3, arr4, arr5)
-    writeToAvroParquetFile(data, schema, NEW_BEHAVIOR, "/Users/kate/parquets/avro/flat_array_new.parquet")
+    writeToAvroParquetFile(data, schema, NEW_BEHAVIOR, "/opt/presto/parquet/avro_new/avro_array_new.parquet")
     data = List(arr1, arr3, arr4, arr5)
-    writeToAvroParquetFile(data, schema, new Configuration(), "/Users/kate/parquets/avro/flat_array_old.parquet")
+    writeToAvroParquetFile(data, schema, new Configuration(), "/opt/presto/parquet/avro_old/avro_array_old.parquet")
   }
 
 }
